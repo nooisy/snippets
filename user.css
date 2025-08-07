@@ -1,0 +1,181 @@
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
+@import url("https://smolalli.github.io/Themes/Snippets/removechatbuttons.css");
+
+/* SETTINGS MODAL */
+:root {
+	--settingswidth: 900;
+	--settingsheight: 80;
+	--settingsbackground: transparent;
+}
+
+/* REMOVE CHAT BUTTONS */
+:root {
+    /* Chat Area */
+    --gift: none;
+    --gif: none;
+    --sticker: none;
+    --activity: none;
+
+    /* Channels Sidebar */
+    --invite: none;
+    --guide: none;
+    --channels: none;
+    --browse: none;
+    --members: none;
+    --server-shop: none;
+    --boost: none;
+
+    /* DM Area */
+    --friends: none;
+    --store: none;
+    --shop: none;
+
+    /* Discover Button */
+    --discover: none;
+    --discover-indicator: 0;
+}
+
+/* Activity */
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
+
+/* Nameplates */
+div:has(>img[src^="https://cdn.discordapp.com/assets/collectibles/nameplates/"]) {
+  display: none;
+}
+
+/* Disable various upsells and premium features */
+div[id="profile-customization-tab"] > div[class^="container_"],
+[class^="nitroTextAndBadge_"], 
+button:has([class^="premiumIcon_"]),
+[class^="emojiSection_"] [class^="flex_"] div[class*="text-sm-normal"],
+button[aria-label="Send a gift"] {
+    display: none;
+}
+
+/* Hide Channel App Launcher */
+[class^="channelAppLauncher_"],
+[class^="channelAppLauncher_"] > [class^="buttonContainer_"],
+.visual-refresh .channelAppLauncher_e6e74f {
+    display: none;
+}
+
+/* Hide DM page elements */
+li div a[href="/shop"],
+li div a[href="/store"] {
+  display: none;
+}
+
+/* Hide DM Wallpapers */
+[class^="chatContent_"] > [class^="wallpaperContainer_"],
+[class^="chatContent_"] > [class^="thumbhashContainer_"] {
+    display: none;
+}
+
+/* Profile effects and decorations */
+[class^="profileEffects"],
+svg[class^="avatarDecoration"],
+img[class^="avatarDecoration"],
+[class*="bannerSVGWrapper_"] > mask > image {
+    display: none;
+}
+
+/* Avatar decoration hint fixes */
+[class*=avatarDecorationHint_] > foreignObject {
+  width: 80px;
+  height: 80px;
+  mask: url(#svg-mask-avatar-status-round-80);
+}
+
+[class*=avatarDecorationHint_] {
+  top: -80px;
+  left: 0px;
+  position: relative;
+}
+
+/* Hide nameplate video containers */
+div[class*=videoContainer_] {
+    display: none;
+}
+
+div[class*="container"]:has(div[class*=videoContainer_]) {
+    background: none !important; 
+}
+
+/* Disable nitro interactions */
+div[class*=nameAndDecorators] div[role="button"]:has(svg[aria-label^="Server boosting since"]),
+div[class*=nameAndDecorators] div[role="button"]:has(svg[aria-label^="Server Boosting since"]) {
+    pointer-events: none;
+}
+
+/* Hide clan tags */
+div[class^=body_] > span[class^="clickable_"] [role="button"],
+div[class*=compact_] span[class*="clanTagChiplet_"],
+span[class*="clanTagChiplet_"],
+span[class*="clanTag_"] {
+    display: none;
+}
+
+/* Hide nitro overlays */
+div[class*=overlayBackground_]:has(button[class*=getNitroButton_]),
+div[class*=characterCount_] div[class*=iconOnly_]:has(svg[class*=premium_]) {
+    display: none;
+}
+
+/* Hide Discover server elements */
+div[class*="listItem"]:has(div[data-list-item-id="guildsnav___guild-discover-button"]),
+ul[data-list-id='guildsnav'] > div[class^=footer] {
+  display: none;
+}
+
+/* Fix unread mentions positioning */
+div[class*=unreadMentionsFixedFooter] {
+  bottom: 0px;
+}
+
+/* Reduce Super Reactions annoyance */
+div[class^="effectsWrapper"] {
+    display: none;
+} 
+
+img.emoji {
+    opacity: 100;
+}
+
+div[class*="shakeReaction"] {
+    animation: none !important;
+}
+
+/* Removes holographic role color fx */
+[class*="ColorGradient"] {
+    background: var(--custom-gradient-color-1);
+    -webkit-background-clip: text;
+}
+.usernameGlow_e5de78 {
+    opacity: 0 !important;
+}
+.convenienceGlowGradientActive_e5de78:after {
+    content: unset;
+}
+
+/* Hides collapse blocked/ignored messages */
+.scrollerInner__36d07 > .groupStart__5126c > .wrapper_c19a55{
+  display: none;
+}
+
+/* Removes blocked messages highlight */
+.expanded__7a70a{
+  background: inherit;
+}
+
+/* Hides boost progress */
+.contentContainer__0d0f9 {
+    display: none;
+}
+
+/* Hides divider line above boost progress */
+.container__0d0f9.containerWithMargin__0d0f9 {
+    display: none;
+}
