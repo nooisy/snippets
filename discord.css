@@ -64,7 +64,8 @@ button[aria-label="Send a gift"] {
 
 /* Hide DM page elements */
 li div a[href="/shop"],
-li div a[href="/store"] {
+li div a[href="/store"],
+.sectionDivider__35e86 {
   display: none;
 }
 
