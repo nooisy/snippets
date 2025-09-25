@@ -1,5 +1,6 @@
+/* use Inter on PC, default font on apple */
 * {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', -apple-system !important;
 }
 
 .zen-current-workspace-indicator {
