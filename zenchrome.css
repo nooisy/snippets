@@ -1,0 +1,49 @@
+* {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.zen-current-workspace-indicator {
+  min-height: 40px !important;
+  max-height: 40px !important;
+  font-size: unset !important;
+  margin-bottom: -2px !important;
+}
+
+/* --- EXTENSION MENU --- */
+#unified-extensions-view {
+  width: 250px !important;
+}
+
+#unified-extensions-view .panel-header,
+#unified-extensions-view .panel-header + toolbarseparator,
+#unified-extensions-view .unified-extensions-item-message-deck,
+#unified-extensions-view .unified-extensions-item-menu-button.subviewbutton {
+  display: none !important; /* Hide panel header, permissions items and setting buttons */
+}
+
+#unified-extensions-view .panel-subview-body {
+  margin-top: -1px;
+  margin-bottom: 3px;
+}
+
+#unified-extensions-view toolbarbutton {
+  padding: 5px 8px !important;
+}
+
+#unified-extensions-view .panel-subview-body + toolbarseparator {
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
+}
+
+#unified-extensions-view #unified-extensions-manage-extensions {
+  margin-bottom: 5px !important;
+}
+
+#unified-extensions-view {
+  --uei-icon-size: 20px;
+}
+
+/* Hide suggestions when URL bar is focused but user hasn't typed anything yet */
+#urlbar[focused]:not([usertyping]) .urlbarView-body-outer {
+  display: none !important;
+}
