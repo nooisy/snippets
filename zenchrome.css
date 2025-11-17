@@ -1,4 +1,4 @@
-/* use Inter on PC, default font on apple */
+/* --- use Inter on PC, default font on apple --- */
 * {
   font-family: 'Inter', -apple-system !important;
 }
@@ -10,7 +10,7 @@
   margin-bottom: -2px !important;
 }
 
-/* --- EXTENSION MENU --- */
+/* --- extension menu --- */
 #unified-extensions-view {
   width: 250px !important;
 }
@@ -19,7 +19,7 @@
 #unified-extensions-view .panel-header + toolbarseparator,
 #unified-extensions-view .unified-extensions-item-message-deck,
 #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton {
-  display: none !important; /* Hide panel header, permissions items and setting buttons */
+  display: none !important; /* hide panel header, permissions items and setting buttons */
 }
 
 #unified-extensions-view .panel-subview-body {
@@ -44,7 +44,7 @@
   --uei-icon-size: 20px;
 }
 
-/* Hide suggestions when URL bar is focused but user hasn't typed anything yet */
+/* --- hide suggestions when URL bar is focused but user hasn't typed anything yet --- */
 #urlbar[focused]:not([usertyping]) .urlbarView-body-outer {
   display: none !important;
 }
