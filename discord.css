@@ -205,8 +205,8 @@ div[class*="shakeReaction"] {
   content: unset;
 }
 
-/* Hides collapse blocked/ignored messages */
-.scrollerInner__36d07 > .groupStart__5126c > .wrapper_c19a55 {
+/* Hides blocked/ignored messages */
+div[class*="groupStart"]:has([class*="blockedSystemMessage"]) {
   display: none;
 }
 
@@ -218,4 +218,9 @@ div[class*="shakeReaction"] {
 /* Fix unread mentions positioning */
 div[class*="unreadMentionsFixedFooter"] {
   bottom: 0;
+}
+
+/* Hide clan badges */
+[aria-label*="Server Tag"] {
+  display: none;
 }
